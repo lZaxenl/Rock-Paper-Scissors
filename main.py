@@ -1,0 +1,64 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+choice1 = int(input("choose 0 for rock, 1 for paper, or 2 for scissors: "))
+choice2 = random.randint(0,2)
+
+print(f"Computer chose {choice2}")
+if choice2 == 0:
+  print(rock)
+elif choice2 == 1:
+  print(paper)
+elif choice2 == 2:
+  print(scissors)
+
+print(f"You chose {choice1}")
+if choice1 == 0:
+  print(rock)
+elif choice1 == 1:
+  print(paper)
+elif choice1 == 2:
+  print(scissors)
+
+if choice1 == choice2:
+  print("It's a draw!")
+elif choice1 == 0 and choice2 == 1:
+  print("You lose!")
+elif choice2 == 0 and choice1 == 1:
+  print("You win!")
+elif choice1 == 1 and choice2 == 2:
+  print("You lose!")
+elif choice2 == 1 and choice1 == 2:
+  print("You win!")
+elif choice1 == 2 and choice2 == 0:
+  print("You lose!")
+elif choice2 == 2 and choice1 == 0:
+  print("You win!")
+else:
+  print("You typed an invalid number. You lose!")
